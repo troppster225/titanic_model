@@ -9,16 +9,16 @@ def predict_survival(model, features):
     return "Survived" if prediction[0] == 1 else "Did not survive"
 #Streamlit App
 def main():
+    st.write(
+    '''
+    # Would you survive the Titanic disaster?
 
     '''
-    # Would you survive the Titanic desaster?
-
-    '''
-    
+    )
     #Inputs
     st.write('---')
 
-    pclass = st.selectbox("What passenger class are you?", ["First", "Second", "Third"])
+    pclass = st.selectbox("What passenger class are you? (PClass)", [1, 2, 3])
 
     gender = st.radio('What gender are you?',['Male', 'Female'])
 
